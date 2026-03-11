@@ -286,9 +286,6 @@ section {
     margin-bottom: 1rem;
 }
 
-.about-details .detail-item:last-child {
-    margin-top: 10rem;  /* ← Zusätzlicher Abstand vor "Interessen" */
-}
 
 .about-details ul li {
     margin-bottom: 0.5rem;
@@ -914,7 +911,7 @@ footer p {
 /* ERZWUNGENER ABSTAND VOR INTERESSEN - GARANTIERT */
 .about-details > div:last-child,
 .about-details .detail-item:last-child {
-    margin-top: 10rem !important;
+    margin-top: 6rem !important;
     padding-top: 2rem !important;
 }
 
