@@ -211,36 +211,56 @@ section {
     overflow: hidden;
 }
 
-/* Leuchtender digitaler Kopf links - NEU VERBESSERT */
+
+
+
+
+/* Leuchtender digitaler Kopf links - mit erkennbarer Silhouette */
 .hero::before {
     content: "";
     position: absolute;
-    left: 5%;
+    left: 2%;
     top: 50%;
     transform: translateY(-50%);
-    width: 500px;
+    width: 450px;
     height: 500px;
     background: 
-        /* Kopf-Silhouette */
-        radial-gradient(circle at 30% 50%, rgba(0, 255, 255, 0.25) 0%, transparent 60%),
-        /* Netzwerk-Linien (Gehirnwellen) */
-        repeating-linear-gradient(45deg, transparent 0px, transparent 25px, rgba(0, 200, 255, 0.15) 25px, rgba(0, 200, 255, 0.15) 26px),
-        repeating-linear-gradient(-45deg, transparent 0px, transparent 30px, rgba(0, 200, 255, 0.1) 30px, rgba(0, 200, 255, 0.1) 31px),
-        /* Datenpunkte - leuchtend */
-        radial-gradient(circle at 25% 40%, #ff8c00 2px, transparent 2px),
-        radial-gradient(circle at 35% 55%, #00ffff 3px, transparent 3px),
-        radial-gradient(circle at 20% 65%, #ff8c00 2px, transparent 2px),
-        radial-gradient(circle at 40% 30%, #00ffff 4px, transparent 4px),
-        radial-gradient(circle at 30% 75%, #ff8c00 3px, transparent 3px),
-        radial-gradient(circle at 45% 45%, #00ffff 2px, transparent 2px),
-        /* Zusätzliche leuchtende Punkte */
-        radial-gradient(circle at 15% 35%, rgba(255, 140, 0, 0.4) 5px, transparent 5px),
-        radial-gradient(circle at 50% 60%, rgba(0, 255, 255, 0.4) 6px, transparent 6px);
-    filter: blur(0.8px);
-    opacity: 0.8;
-    animation: glowPulse 4s infinite alternate;
+        /* Kopf-Silhouette (Profil) */
+        radial-gradient(ellipse at 30% 50%, rgba(0, 255, 255, 0.3) 0%, transparent 50%),
+        /* Gesichtskontur */
+        radial-gradient(circle at 25% 40%, rgba(0, 200, 255, 0.2) 20px, transparent 30px),
+        /* Augenbereich */
+        radial-gradient(circle at 20% 35%, #00ffff 3px, transparent 3px),
+        radial-gradient(circle at 35% 35%, #00ffff 3px, transparent 3px),
+        /* Neuronale Verbindungen (Netzwerk) */
+        repeating-linear-gradient(45deg, transparent 0px, transparent 15px, rgba(0, 255, 255, 0.2) 15px, rgba(0, 255, 255, 0.2) 16px),
+        repeating-linear-gradient(-45deg, transparent 0px, transparent 20px, rgba(255, 140, 0, 0.15) 20px, rgba(255, 140, 0, 0.15) 21px),
+        /* Datenpunkte */
+        radial-gradient(circle at 15% 45%, #ff8c00 4px, transparent 4px),
+        radial-gradient(circle at 28% 55%, #00ffff 5px, transparent 5px),
+        radial-gradient(circle at 40% 30%, #ff8c00 3px, transparent 3px),
+        radial-gradient(circle at 22% 65%, #00ffff 4px, transparent 4px),
+        radial-gradient(circle at 32% 45%, #ff8c00 3px, transparent 3px),
+        /* Kinn-/Mundbereich */
+        radial-gradient(ellipse at 25% 60%, rgba(255, 140, 0, 0.2) 10px, transparent 15px);
+    filter: blur(1px);
+    opacity: 0.9;
+    animation: headPulse 5s infinite alternate;
     z-index: 0;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.3);
 }
+
+/* Zusätzliche Animation für den Kopf */
+@keyframes headPulse {
+    0% { opacity: 0.7; filter: blur(1px); box-shadow: 0 0 30px rgba(0, 255, 255, 0.2); }
+    50% { opacity: 1; filter: blur(0.5px); box-shadow: 0 0 60px rgba(0, 255, 255, 0.5); }
+    100% { opacity: 0.7; filter: blur(1px); box-shadow: 0 0 30px rgba(0, 255, 255, 0.2); }
+}
+
+
+
+
 
 /* Digitales Gehirn rechts */
 .hero::after {
