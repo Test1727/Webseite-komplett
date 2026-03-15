@@ -566,7 +566,7 @@ section {
     z-index: 0;
 }
 
-/* Damit der Inhalt über den Hintergrundformen liegt */
+/* Damit der Inhalt unter den Hintergrundformen liegt */
 .projects .container {
     position: relative;
     z-index: 1;
