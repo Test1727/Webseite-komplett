@@ -494,6 +494,10 @@ section {
         min-height: 100vh;  /* Volle Höhe erzwingen */
         overflow: hidden;  /* Abschneiden verhindern */
     }
+    
+    section {
+        scroll-margin-top: 100px;  /* Höherer Wert für Smartphone */
+    }
 }
     
     
