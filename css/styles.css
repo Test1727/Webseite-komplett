@@ -274,7 +274,7 @@ nav ul li a:hover, nav ul li a.active {
     padding: 6px 15px;
     font-size: 0.85rem;
     background-color: transparent;
-    color: var(--primary-color);
+    color: #0a2463 !important;
     border: 2px solid #00ffff;
     border-radius: var(--border-radius);
     font-weight: 500;
@@ -289,7 +289,7 @@ nav ul li a:hover, nav ul li a.active {
 
 .resume-btn:hover {
     background-color: #00ffff;
-    color: var(--primary-color);
+    color: #0a2463 !important;
     border-color: #00ffff;
 }
 
