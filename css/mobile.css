@@ -13,7 +13,7 @@
     /* Hero Section */
     .hero {
         padding-top: 100px !important;
-        min-height: 100vh;
+        min-height: 120vh !important;
         overflow: hidden;
     }
     
